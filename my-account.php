@@ -14,12 +14,12 @@ else{
 		$query=mysqli_query($con,"update users set name='$name',contactno='$contactno' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Your info has been updated');</script>";
+echo "<script>alert('tu informacion fue actualizada');</script>";
 		}
 	}
 
 
-date_default_timezone_set('Asia/Kolkata');// change according timezone
+date_default_timezone_set('America/Bogota');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
@@ -34,7 +34,7 @@ echo "<script>alert('Password Changed Successfully !!');</script>";
 }
 else
 {
-	echo "<script>alert('Current Password not match !!');</script>";
+	echo "<script>alert('¡tu contraseña actual no coincide!');</script>";
 }
 }
 
@@ -48,10 +48,10 @@ else
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>My Account</title>
+	    <title>Mi cuenta</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -77,31 +77,31 @@ else
 		<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 <script type="text/javascript">
 function valid()
 {
 if(document.chngpwd.cpass.value=="")
 {
-alert("Current Password Filed is Empty !!");
+alert("¡Tu contraseña actual esta vacia!");
 document.chngpwd.cpass.focus();
 return false;
 }
 else if(document.chngpwd.newpass.value=="")
 {
-alert("New Password Filed is Empty !!");
+alert("¡Tu nueva contraseña esta vacia!");
 document.chngpwd.newpass.focus();
 return false;
 }
 else if(document.chngpwd.cnfpass.value=="")
 {
-alert("Confirm Password Filed is Empty !!");
+alert("¡Confirmar contraseña esta vacia!");
 document.chngpwd.cnfpass.focus();
 return false;
 }
 else if(document.chngpwd.newpass.value!= document.chngpwd.cnfpass.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("¡Contraseña y contraseña de confirmacion no coinciden!");
 document.chngpwd.cnfpass.focus();
 return false;
 }
@@ -127,8 +127,8 @@ return true;
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Checkout</li>
+				<li><a href="index.php">Inicio</a></li>
+				<li class='active'>mi cuenta</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -147,7 +147,7 @@ return true;
 		<div class="panel-heading">
     	<h4 class="unicase-checkout-title">
 	        <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
-	          <span>1</span>My Profile
+	          <span>1</span>Mi perfil
 	        </a>
 	     </h4>
     </div>
@@ -158,7 +158,7 @@ return true;
 		<!-- panel-body  -->
 	    <div class="panel-body">
 			<div class="row">		
-<h4>Personal info</h4>
+                  <h4>Informacion personal</h4>
 				<div class="col-md-12 col-sm-12 already-registered-login">
 
 <?php
@@ -169,21 +169,21 @@ while($row=mysqli_fetch_array($query))
 
 					<form class="register-form" role="form" method="post">
 <div class="form-group">
-					    <label class="info-title" for="name">Name<span>*</span></label>
+					    <label class="info-title" for="name">Nombre<span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" value="<?php echo $row['name'];?>" id="name" name="name" required="required">
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+					    <label class="info-title" for="exampleInputEmail1">Correo <span>*</span></label>
 			 <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="<?php echo $row['email'];?>" readonly>
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Contact No.">Contact No. <span>*</span></label>
+					    <label class="info-title" for="Contact No.">Numero telefonico <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="contactno" name="contactno" required="required" value="<?php echo $row['contactno'];?>"  maxlength="10">
 					  </div>
-					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Update</button>
+					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Actualizar</button>
 					</form>
 					<?php } ?>
 				</div>	
@@ -201,7 +201,7 @@ while($row=mysqli_fetch_array($query))
 						    <div class="panel-heading">
 						      <h4 class="unicase-checkout-title">
 						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseTwo">
-						          <span>2</span>Change Password
+						          <span>2</span>Cambiar contraseña
 						        </a>
 						      </h4>
 						    </div>
@@ -210,21 +210,21 @@ while($row=mysqli_fetch_array($query))
 						     
 					<form class="register-form" role="form" method="post" name="chngpwd" onSubmit="return valid();">
 <div class="form-group">
-					    <label class="info-title" for="Current Password">Current Password<span>*</span></label>
+					    <label class="info-title" for="Current Password">Contraseña actual<span>*</span></label>
 					    <input type="password" class="form-control unicase-form-control text-input" id="cpass" name="cpass" required="required">
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="New Password">New Password <span>*</span></label>
+					    <label class="info-title" for="New Password">Nueva contraseña <span>*</span></label>
 			 <input type="password" class="form-control unicase-form-control text-input" id="newpass" name="newpass">
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Confirm Password">Confirm Password <span>*</span></label>
+					    <label class="info-title" for="Confirm Password">Confirmar contraseña <span>*</span></label>
 					    <input type="password" class="form-control unicase-form-control text-input" id="cnfpass" name="cnfpass" required="required" >
 					  </div>
-					  <button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button">Change </button>
+					  <button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button">Cambiar</button>
 					</form> 
 
 

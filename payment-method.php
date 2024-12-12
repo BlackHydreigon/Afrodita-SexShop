@@ -16,7 +16,7 @@ else{
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -24,10 +24,10 @@ else{
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>Shopping Portal | Payment Method</title>
+	    <title>Compra | Metodos de pago</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -46,7 +46,7 @@ else{
 		<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 	</head>
     <body class="cnt-home">
 	
@@ -60,8 +60,8 @@ else{
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Payment Method</li>
+				<li><a href="index.php">inicio</a></li>
+				<li class='active'>Metodos de pago</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -72,7 +72,7 @@ else{
 		<div class="checkout-box faq-page inner-bottom-sm">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Choose Payment Method</h2>
+					<h2>Escoge tu metodo de pago</h2>
 					<div class="panel-group checkout-steps" id="accordion">
 						<!-- checkout-step-01  -->
 <div class="panel panel-default checkout-step-01">
@@ -81,7 +81,7 @@ else{
 		<div class="panel-heading">
     	<h4 class="unicase-checkout-title">
 	        <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
-	         Select your Payment Method
+	         Selecciona tu metodo de pago
 	        </a>
 	     </h4>
     </div>
@@ -92,9 +92,9 @@ else{
 		<!-- panel-body  -->
 	    <div class="panel-body">
 	    <form name="payment" method="post">
-	    <input type="radio" name="paymethod" value="COD" checked="checked"> COD
-	     <input type="radio" name="paymethod" value="Internet Banking"> Internet Banking
-	     <input type="radio" name="paymethod" value="Debit / Credit card"> Debit / Credit card <br /><br />
+	    <input type="radio" name="paymethod" value="COD" checked="checked"> Pago contraentrega
+	     <input type="radio" name="paymethod" value="Internet Banking"> PSE
+	     <input type="radio" name="paymethod" value="Debit / Credit card"> Targeta debito/ credito <br /><br />
 	     <input type="submit" value="submit" name="submit" class="btn btn-primary">
 	    	
 

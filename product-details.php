@@ -14,7 +14,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
 			header('location:my-cart.php');
 		}else{
-			$message="Product ID is invalid";
+			$message="Id de producto invalido";
 		}
 	}
 }
@@ -46,16 +46,16 @@ if(isset($_POST['submit']))
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
-	    <title>Product Details</title>
+	    <title>Detalles del producto</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -76,7 +76,7 @@ if(isset($_POST['submit']))
 
         <!-- Fonts --> 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 	</head>
     <body class="cnt-home">
 	
@@ -104,7 +104,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 
 			<ul class="list-inline list-unstyled">
-				<li><a href="index.php">Home</a></li>
+				<li><a href="index.php">inicio</a></li>
 				<li><?php echo htmlentities($rw['catname']);?></a></li>
 				<li><?php echo htmlentities($rw['subcatname']);?></li>
 				<li class='active'><?php echo htmlentities($rw['pname']);?></li>
@@ -122,7 +122,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 					<!-- ==============================================CATEGORY============================================== -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
-	<h3 class="section-title">Category</h3>
+	<h3 class="section-title">Categoria</h3>
 	<div class="sidebar-widget-body m-t-10">
 		<div class="accordion">
 
@@ -144,7 +144,7 @@ while($row=mysqli_fetch_array($sql))
 </div>
 	<!-- ============================================== CATEGORY : END ============================================== -->					<!-- ============================================== HOT DEALS ============================================== -->
 <div class="sidebar-widget hot-deals wow fadeInUp">
-	<h3 class="section-title">hot deals</h3>
+	<h3 class="section-title">mejores ofertas</h3>
 	<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
 		
 								   <?php
@@ -169,10 +169,10 @@ while ($rws=mysqli_fetch_array($ret)) {
 
 							<div class="product-price">	
 								<span class="price">
-									Rp. <?php echo htmlentities($rws['productPrice']);?>.00
+									Cop. <?php echo htmlentities($rws['productPrice']);?>.00
 								</span>
 									
-							    <span class="price-before-discount">Rp.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					
+							    <span class="price-before-discount">Cop.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					
 							
 							</div><!-- /.product-price -->
 							
@@ -298,7 +298,7 @@ $num=mysqli_num_rows($rt);
 									</div>
 									<div class="col-sm-8">
 										<div class="reviews">
-											<a href="#" class="lnk">(<?php echo htmlentities($num);?> Reviews)</a>
+											<a href="#" class="lnk">(<?php echo htmlentities($num);?>Reseñas)</a>
 										</div>
 									</div>
 								</div><!-- /.row -->		
@@ -308,7 +308,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									<div class="col-sm-3">
 										<div class="stock-box">
-											<span class="label">Availability :</span>
+											<span class="label">Disponibilidad :</span>
 										</div>	
 									</div>
 									<div class="col-sm-9">
@@ -325,7 +325,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									<div class="col-sm-3">
 										<div class="stock-box">
-											<span class="label">Product Brand :</span>
+											<span class="label">Marca del producto:</span>
 										</div>	
 									</div>
 									<div class="col-sm-9">
@@ -341,7 +341,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									<div class="col-sm-3">
 										<div class="stock-box">
-											<span class="label">Shipping Charge :</span>
+											<span class="label">Coste de envio :</span>
 										</div>	
 									</div>
 									<div class="col-sm-9">
@@ -367,7 +367,7 @@ $num=mysqli_num_rows($rt);
 
 									<div class="col-sm-6">
 										<div class="price-box">
-											<span class="price">Rp. <?php echo htmlentities($row['productPrice']);?></span>
+											<span class="price">Cop. <?php echo htmlentities($row['productPrice']);?></span>
 											<span class="price-strike">Rp.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 										</div>
 									</div>
@@ -397,7 +397,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									
 									<div class="col-sm-2">
-										<span class="label">Qty :</span>
+										<span class="label">Cantidad :</span>
 									</div>
 									
 									<div class="col-sm-2">
@@ -413,7 +413,7 @@ $num=mysqli_num_rows($rt);
 									</div>
 
 									<div class="col-sm-7">
-										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i>Añadir al carrito</a>
 									</div>
 
 									
@@ -421,10 +421,10 @@ $num=mysqli_num_rows($rt);
 							</div><!-- /.quantity-container -->
 
 							<div class="product-social-link m-t-20 text-right">
-								<span class="social-label">Share :</span>
+								<span class="social-label">Compartir :</span>
 								<div class="social-icons">
 						            <ul class="list-inline">
-						                <li><a class="fa fa-facebook" href="http://facebook.com/transvelo"></a></li>
+						                <li><a class="fa fa-facebook" href="#"></a></li>
 						                <li><a class="fa fa-twitter" href="#"></a></li>
 						                <li><a class="fa fa-linkedin" href="#"></a></li>
 						                <li><a class="fa fa-rss" href="#"></a></li>
@@ -445,8 +445,8 @@ $num=mysqli_num_rows($rt);
 					<div class="row">
 						<div class="col-sm-3">
 							<ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-								<li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
-								<li><a data-toggle="tab" href="#review">REVIEW</a></li>
+								<li class="active"><a data-toggle="tab" href="#description">Descripcion</a></li>
+								<li><a data-toggle="tab" href="#review">Reseñas</a></li>
 							</ul><!-- /.nav-tabs #product-tabs -->
 						</div>
 						<div class="col-sm-9">
@@ -463,7 +463,7 @@ $num=mysqli_num_rows($rt);
 									<div class="product-tab">
 																				
 										<div class="product-reviews">
-											<h4 class="title">Customer Reviews</h4>
+											<h4 class="title">Reseñas de clientes</h4>
 <?php $qry=mysqli_query($con,"select * from productreviews where productId='$pid'");
 while($rvw=mysqli_fetch_array($qry))
 {
@@ -474,9 +474,9 @@ while($rvw=mysqli_fetch_array($qry))
 													<div class="review-title"><span class="summary"><?php echo htmlentities($rvw['summary']);?></span><span class="date"><i class="fa fa-calendar"></i><span><?php echo htmlentities($rvw['reviewDate']);?></span></span></div>
 
 													<div class="text">"<?php echo htmlentities($rvw['review']);?>"</div>
-													<div class="text"><b>Quality :</b>  <?php echo htmlentities($rvw['quality']);?> Star</div>
-													<div class="text"><b>Price :</b>  <?php echo htmlentities($rvw['price']);?> Star</div>
-													<div class="text"><b>value :</b>  <?php echo htmlentities($rvw['value']);?> Star</div>
+													<div class="text"><b>calidad :</b>  <?php echo htmlentities($rvw['quality']);?> inicio</div>
+													<div class="text"><b>precio :</b>  <?php echo htmlentities($rvw['price']);?> inicio</div>
+													<div class="text"><b>valor :</b>  <?php echo htmlentities($rvw['value']);?> inicio</div>
                                                 <div class="author m-t-15"><i class="fa fa-pencil-square-o"></i> <span class="name"><?php echo htmlentities($rvw['name']);?></span></div>													</div>
 											
 											</div>
@@ -486,23 +486,23 @@ while($rvw=mysqli_fetch_array($qry))
 
 										
 										<div class="product-add-review">
-											<h4 class="title">Write your own review</h4>
+											<h4 class="title">Escribe tu propia reseña</h4>
 											<div class="review-table">
 												<div class="table-responsive">
 													<table class="table table-bordered">	
 														<thead>
 															<tr>
 																<th class="cell-label">&nbsp;</th>
-																<th>1 star</th>
-																<th>2 stars</th>
-																<th>3 stars</th>
-																<th>4 stars</th>
-																<th>5 stars</th>
+																<th>1 estrella</th>
+																<th>2 estrella</th>
+																<th>3 estrella</th>
+																<th>4 estrella</th>
+																<th>5 estrella</th>
 															</tr>
 														</thead>	
 														<tbody>
 															<tr>
-																<td class="cell-label">Quality</td>
+																<td class="cell-label">calidad</td>
 																<td><input type="radio" name="quality" class="radio" value="1"></td>
 																<td><input type="radio" name="quality" class="radio" value="2"></td>
 																<td><input type="radio" name="quality" class="radio" value="3"></td>
@@ -510,7 +510,7 @@ while($rvw=mysqli_fetch_array($qry))
 																<td><input type="radio" name="quality" class="radio" value="5"></td>
 															</tr>
 															<tr>
-																<td class="cell-label">Price</td>
+																<td class="cell-label">precio</td>
 																<td><input type="radio" name="price" class="radio" value="1"></td>
 																<td><input type="radio" name="price" class="radio" value="2"></td>
 																<td><input type="radio" name="price" class="radio" value="3"></td>
@@ -518,7 +518,7 @@ while($rvw=mysqli_fetch_array($qry))
 																<td><input type="radio" name="price" class="radio" value="5"></td>
 															</tr>
 															<tr>
-																<td class="cell-label">Value</td>
+																<td class="cell-label">Valor</td>
 																<td><input type="radio" name="value" class="radio" value="1"></td>
 																<td><input type="radio" name="value" class="radio" value="2"></td>
 																<td><input type="radio" name="value" class="radio" value="3"></td>
@@ -537,18 +537,18 @@ while($rvw=mysqli_fetch_array($qry))
 														<div class="row">
 															<div class="col-sm-6">
 																<div class="form-group">
-																	<label for="exampleInputName">Your Name <span class="astk">*</span></label>
+																	<label for="exampleInputName">Tu nombre <span class="astk">*</span></label>
 																<input type="text" class="form-control txt" id="exampleInputName" placeholder="" name="name" required="required">
 																</div><!-- /.form-group -->
 																<div class="form-group">
-																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
+																	<label for="exampleInputSummary">resumen <span class="astk">*</span></label>
 																	<input type="text" class="form-control txt" id="exampleInputSummary" placeholder="" name="summary" required="required">
 																</div><!-- /.form-group -->
 															</div>
 
 															<div class="col-md-6">
 																<div class="form-group">
-																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
+																	<label for="exampleInputReview">Reseña <span class="astk">*</span></label>
 
 <textarea class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder="" name="review" required="required"></textarea>
 																</div><!-- /.form-group -->
@@ -556,7 +556,7 @@ while($rvw=mysqli_fetch_array($qry))
 														</div><!-- /.row -->
 														
 														<div class="action text-right">
-															<button name="submit" class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
+															<button name="submit" class="btn btn-primary btn-upper">Enviar reseña</button>
 														</div><!-- /.action -->
 
 													</form><!-- /.cnt-form -->
@@ -579,7 +579,7 @@ while($rvw=mysqli_fetch_array($qry))
 			$subcid=$row['subCategory']; } ?>
 				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">Realted Products </h3>
+	<h3 class="section-title">Productos relacionados </h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 	   
 		<?php 
@@ -609,8 +609,8 @@ while($rw=mysqli_fetch_array($qry))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs.<?php echo htmlentities($rw['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.
+					Cop.<?php echo htmlentities($rw['productPrice']);?>			</span>
+										     <span class="price-before-discount">Cop.
 										     <?php echo htmlentities($rw['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
@@ -623,7 +623,7 @@ while($rw=mysqli_fetch_array($qry))
 							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
-						<a href="product-details.php?page=product&action=add&id=<?php echo $rw['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
+						<a href="product-details.php?page=product&action=add&id=<?php echo $rw['id']; ?>" class="lnk btn btn-primary">Añadir al carrito</a>
 													
 						</li>
 	                   

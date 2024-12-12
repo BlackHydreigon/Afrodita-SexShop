@@ -17,7 +17,7 @@ else{
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -25,10 +25,10 @@ else{
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>Pending Order History</title>
+	    <title>Pedidos pendientes</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -58,7 +58,7 @@ else{
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 
 		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
 		<!--[if lt IE 9]>
@@ -82,8 +82,8 @@ else{
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Shopping Cart</li>
+				<li><a href="index.php">Inicio</a></li>
+				<li class='active'>Carrito de compras</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -101,16 +101,16 @@ else{
 			<thead>
 				<tr>
 					<th class="cart-romove item">#</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-description item">Imagen</th>
+					<th class="cart-product-name item">Nombre de producto</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-						<th class="cart-sub-total item">Shiping Charge</th>
-					<th class="cart-total">Grandtotal</th>
-					<th class="cart-total item">Payment Method</th>
-					<th class="cart-description item">Order Date</th>
-					<th class="cart-total last-item">Action</th>
+					<th class="cart-qty item">Cantidad</th>
+					<th class="cart-sub-total item">Precio por unidad</th>
+						<th class="cart-sub-total item">Costo de envio</th>
+					<th class="cart-total">Precio Total</th>
+					<th class="cart-total item">Metodos de pago</th>
+					<th class="cart-description item">Fecha de Orden</th>
+					<th class="cart-total last-item">Accion</th>
 				</tr>
 			</thead><!-- /thead -->
 			
@@ -146,7 +146,7 @@ while($row=mysqli_fetch_array($query))
 					<td class="cart-product-sub-total"><?php echo $row['paym']; ?>  </td>
 					<td class="cart-product-sub-total"><?php echo $row['odate']; ?>  </td>
 					
-					<td><a href="pending-orders.php?id=<?php echo $row['oid']; ?> ">Delete</td>
+					<td><a href="pending-orders.php?id=<?php echo $row['oid']; ?> ">Borrar</td>
 				</tr>
 <?php $cnt=$cnt+1;} ?>
 <tr>
@@ -158,7 +158,7 @@ while($row=mysqli_fetch_array($query))
 </tr>
 <?php } else {?>
 <tr>
-<td colspan="10" align="center"><h4>No Result Found</h4></td>
+<td colspan="10" align="center"><h4>No se encontraron resultados</h4></td>
 </tr>
 <?php } ?>
 

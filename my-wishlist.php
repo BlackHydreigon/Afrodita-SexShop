@@ -29,14 +29,14 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 header('location:my-wishlist.php');
 }
 		else{
-			$message="Product ID is invalid";
+			$message="Id de producto invalida";
 		}
 	}
 }
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -44,10 +44,10 @@ header('location:my-wishlist.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>My Wishlist</title>
+	    <title>Lista de deseos</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    
 	    <!-- Customizable CSS -->
@@ -77,7 +77,7 @@ header('location:my-wishlist.php');
 
         <!-- Fonts --> 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 	</head>
     <body class="cnt-home">
 <header class="header-style-1">
@@ -97,8 +97,8 @@ header('location:my-wishlist.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Wishlish</li>
+				<li><a href="index.php">inicio</a></li>
+				<li class='active'>lista de deseos</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -113,7 +113,7 @@ header('location:my-wishlist.php');
 		<table class="table">
 			<thead>
 				<tr>
-					<th colspan="4">my wishlist</th>
+					<th colspan="4">Mi lista de deseos</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -144,9 +144,9 @@ $num=mysqli_num_rows($rt);
 							<span class="review">( <?php echo htmlentities($num);?> Reviews )</span>
 						</div>
 						<?php } ?>
-						<div class="price">Rs. 
+						<div class="price">Col. 
 							<?php echo htmlentities($row['pprice']);?>.00
-							<span>$900.00</span>
+							<span>$.00</span>
 						</div>
 					</td>
 					<td class="col-md-2">

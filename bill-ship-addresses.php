@@ -17,7 +17,7 @@ else{
 		$query=mysqli_query($con,"update users set billingAddress='$baddress',billingState='$bstate',billingCity='$bcity',billingPincode='$bpincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Billing Address has been updated');</script>";
+echo "<script>alert('Se actualizo la direccion de facturacion');</script>";
 		}
 	}
 
@@ -32,7 +32,7 @@ echo "<script>alert('Billing Address has been updated');</script>";
 		$query=mysqli_query($con,"update users set shippingAddress='$saddress',shippingState='$sstate',shippingCity='$scity',shippingPincode='$spincode' where id='".$_SESSION['id']."'");
 		if($query)
 		{
-echo "<script>alert('Shipping Address has been updated');</script>";
+echo "<script>alert('La direccion de compras');</script>";
 		}
 	}
 
@@ -48,10 +48,10 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>My Account</title>
+	    <title>Mi cuenta</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -77,7 +77,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 		<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 
 	</head>
     <body class="cnt-home">
@@ -97,8 +97,8 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Checkout</li>
+				<li><a href="index.php">Inicio</a></li>
+				<li class='active'>C</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -117,7 +117,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 		<div class="panel-heading">
     	<h4 class="unicase-checkout-title">
 	        <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
-	          <span>1</span>Billing Address
+	          <span>1</span>Direccion de facturacion
 	        </a>
 	     </h4>
     </div>
@@ -138,27 +138,27 @@ while($row=mysqli_fetch_array($query))
 
 					<form class="register-form" role="form" method="post">
 <div class="form-group">
-					    <label class="info-title" for="Billing Address">Billing Address<span>*</span></label>
+					    <label class="info-title" for="Billing Address">Direccion de facturacion<span>*</span></label>
 					    <textarea class="form-control unicase-form-control text-input" " name="billingaddress" required="required"><?php echo $row['billingAddress'];?></textarea>
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="Billing State ">Billing State  <span>*</span></label>
+					    <label class="info-title" for="Billing State ">Departamento  <span>*</span></label>
 			 <input type="text" class="form-control unicase-form-control text-input" id="bilingstate" name="bilingstate" value="<?php echo $row['billingState'];?>" required>
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Billing City">Billing City <span>*</span></label>
+					    <label class="info-title" for="Billing City">Ciudad <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="billingcity" name="billingcity" required="required" value="<?php echo $row['billingCity'];?>" >
 					  </div>
  <div class="form-group">
-					    <label class="info-title" for="Billing Pincode">Billing Pincode <span>*</span></label>
+					    <label class="info-title" for="Billing Pincode">Codigo postal <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="billingpincode" name="billingpincode" required="required" value="<?php echo $row['billingPincode'];?>" >
 					  </div>
 
 
-					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Update</button>
+					  <button type="submit" name="update" class="btn-upper btn btn-primary checkout-page-button">Actualizar</button>
 					</form>
 					<?php } ?>
 				</div>	
@@ -176,7 +176,7 @@ while($row=mysqli_fetch_array($query))
 						    <div class="panel-heading">
 						      <h4 class="unicase-checkout-title">
 						        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseTwo">
-						          <span>2</span>Shipping Address
+						          <span>2</span>Direccion de compra
 						        </a>
 						      </h4>
 						    </div>
@@ -191,27 +191,27 @@ while($row=mysqli_fetch_array($query))
 
 					<form class="register-form" role="form" method="post">
 <div class="form-group">
-					    <label class="info-title" for="Shipping Address">Shipping Address<span>*</span></label>
+					    <label class="info-title" for="Shipping Address">Direccion de compra<span>*</span></label>
 					    <textarea class="form-control unicase-form-control text-input" " name="shippingaddress" required="required"><?php echo $row['shippingAddress'];?></textarea>
 					  </div>
 
 
 
 						<div class="form-group">
-					    <label class="info-title" for="Billing State ">Shipping State  <span>*</span></label>
+					    <label class="info-title" for="Billing State "> Departamento  <span>*</span></label>
 			 <input type="text" class="form-control unicase-form-control text-input" id="shippingstate" name="shippingstate" value="<?php echo $row['shippingState'];?>" required>
 					  </div>
 					  <div class="form-group">
-					    <label class="info-title" for="Billing City">Shipping City <span>*</span></label>
+					    <label class="info-title" for="Billing City"> Ciudad <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="shippingcity" name="shippingcity" required="required" value="<?php echo $row['shippingCity'];?>" >
 					  </div>
  <div class="form-group">
-					    <label class="info-title" for="Billing Pincode">Shipping Pincode <span>*</span></label>
+					    <label class="info-title" for="Billing Pincode"> Codigo postal <span>*</span></label>
 					    <input type="text" class="form-control unicase-form-control text-input" id="shippingpincode" name="shippingpincode" required="required" value="<?php echo $row['shippingPincode'];?>" >
 					  </div>
 
 
-					  <button type="submit" name="shipupdate" class="btn-upper btn btn-primary checkout-page-button">Update</button>
+					  <button type="submit" name="shipupdate" class="btn-upper btn btn-primary checkout-page-button">actualizar</button>
 					</form>
 					<?php } ?>
 

@@ -15,7 +15,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
 			header('location:my-cart.php');
 		}else{
-			$message="Product ID is invalid";
+			$message="Id de producto invalida";
 		}
 	}
 }
@@ -35,7 +35,7 @@ header('location:my-wishlist.php');
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -43,10 +43,10 @@ header('location:my-wishlist.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
-	    <title>Product Category</title>
+	    <title>Categoria De productos</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -80,7 +80,7 @@ header('location:my-wishlist.php');
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 
 		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
 		<!--[if lt IE 9]>
@@ -201,8 +201,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					Cop. <?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">Cop. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
@@ -215,7 +215,7 @@ while ($row=mysqli_fetch_array($ret))
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
+							<button class="btn btn-primary" type="button">Añadir al carrito</button></a>
 													
 						</li>
 	                   
@@ -234,7 +234,7 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 	  <?php } } else {?>
 	
-		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found</h3>
+		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>Producto no encontrado</h3>
 		</div>
 		
 <?php } ?>	

@@ -28,7 +28,7 @@ header('location:login.php');
 else
 {
 mysqli_query($con,"insert into wishlist(userId,productId) values('".$_SESSION['id']."','".$_GET['pid']."')");
-echo "<script>alert('Product aaded in wishlist');</script>";
+echo "<script>alert('Producto aregado a la lista de deseos');</script>";
 header('location:my-wishlist.php');
 
 }
@@ -43,7 +43,7 @@ header('location:my-wishlist.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
 	    <title>Categoria de Productos</title>
@@ -301,7 +301,6 @@ while ($row=mysqli_fetch_array($ret))
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
@@ -318,7 +317,6 @@ while ($row=mysqli_fetch_array($ret))
 		   $('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 	
 
