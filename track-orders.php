@@ -4,7 +4,7 @@ error_reporting(0);
 include('includes/config.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -12,7 +12,7 @@ include('includes/config.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+	    <meta name="keywords" content="Sexshop, bello, Afroditajya">
 	    <meta name="robots" content="all">
 
 	    <title>Track Orders</title>
@@ -33,7 +33,7 @@ include('includes/config.php');
 		<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/icon.png">
 	</head>
     <body class="cnt-home">
 	
@@ -53,8 +53,8 @@ include('includes/config.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Track your orders</li>
+				<li><a href="index.php">Inicio</a></li>
+				<li class='active'>Rastrea tus pedidos</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -65,15 +65,15 @@ include('includes/config.php');
 		<div class="track-order-page inner-bottom-sm">
 			<div class="row">
 				<div class="col-md-12">
-	<h2>Track your Order</h2>
-	<span class="title-tag inner-top-vs">Please enter your Order ID in the box below and press Enter. This was given to you on your receipt and in the confirmation email you should have received. </span>
+	<h2>Rastrea tu pedido</h2>
+	<span class="title-tag inner-top-vs">Introduzca el ID de su pedido en la siguente casilla y preione Enter. Esta informacion esta en el recibo o en el correo electronico donde deberia haberla recibido. </span>
 	<form class="register-form outer-top-xs" role="form" method="post" action="order-details.php">
 		<div class="form-group">
-		    <label class="info-title" for="exampleOrderId1">Order ID</label>
+		    <label class="info-title" for="exampleOrderId1">ID pedido</label>
 		    <input type="text" class="form-control unicase-form-control text-input" name="orderid" id="exampleOrderId1" >
 		</div>
 	  	<div class="form-group">
-		    <label class="info-title" for="exampleBillingEmail1">Registered Email</label>
+		    <label class="info-title" for="exampleBillingEmail1">Correo Registrado</label>
 		    <input type="email" class="form-control unicase-form-control text-input" name="email" id="exampleBillingEmail1" >
 		</div>
 	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button">Track</button>
